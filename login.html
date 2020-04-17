@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link href="./src/CSS/tailwind.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="content" class="w-full h-full min-h-screen p-8 bg-teal-800">
+			<a
+				href="./index.html"
+				class="flex items-center flex-shrink-0 justify-center text-white mt-12 mb-12"
+			>
+				<svg
+					class="fill-current h-8 w-8 mr-2"
+					width="54"
+					height="54"
+					viewBox="0 0 54 54"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M43.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+					/>
+				</svg>
+				<span class="font-semibold text-3xl lg:text-4xl tracking-tight"
+					>Travel Time Login</span
+				>
+			</a>
+			<div class="w-full max-w-xs mx-auto">
+				<img
+					class="h-20 w-auto"
+					src="./img/schluessel.png"
+					alt="Icon which shows a man carrying a key"
+				/>
+				<form
+					id="loginForm"
+					class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+				>
+					<div class="mb-4">
+						<label
+							class="block text-gray-700 text-sm font-bold mb-2"
+							for="username"
+						>
+							Username
+						</label>
+						<input
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							id="username"
+							type="email"
+							placeholder="name@example.com"
+							required
+						/>
+					</div>
+					<div>
+						<label
+							class="block text-gray-700 text-sm font-bold mb-2"
+							for="password"
+						>
+							Password
+						</label>
+						<input
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+							id="password"
+							type="password"
+							placeholder="******************"
+							required
+						/>
+					</div>
+					<div class="mb-6" id="errorMessage"></div>
+					<div class="flex items-center justify-between">
+						<button
+							class="bg-teal-700 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							type="submit"
+						>
+							Log In
+						</button>
+					</div>
+				</form>
+				<p class="text-center text-gray-500 text-xs">
+					&copy;2020 Travel Time AG. All rights reserved.
+				</p>
+				<div class="text-center text-gray-500 text-xs">
+					Icons made by
+					<a href="https://www.flaticon.com/de/autoren/eucalyp" title="Eucalyp"
+						>Eucalyp</a
+					>
+					from
+					<a href="https://www.flaticon.com/de/" title="Flaticon">
+						www.flaticon.com</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+		<script src="./src/JS/config.js"></script>
+		<script src="./src/JS/login.js"></script>
+	</body>
+</html>

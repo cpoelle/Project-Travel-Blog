@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="./src/CSS/tailwind.min.css" rel="stylesheet" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				background-color: #285e61;
+				margin: auto;
+				max-width: 1280px;
+			}
+
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+
+			input[type="number"] {
+				-moz-appearance: textfield;
+			}
+
+			.intro-text,
+			#jumperNewPost,
+			#jumperBlogListing {
+				font-family: "Amatic SC", cursive;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav
+			class="px-8 mb-20 h-32 w-full flex flex-row justify-between items-center text-center"
+		>
+			<div class="flex flex-row items-center">
+				<a href="./src/auth/restricted.html">
+					<div class="flex items-center flex-shrink-0 text-white mr-6">
+						<svg
+							class="fill-current h-8 w-8 mr-2"
+							width="54"
+							height="54"
+							viewBox="0 0 54 54"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M43.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+							/>
+						</svg>
+						<span class="font-semibold text-4xl tracking-tight"
+							>Travel Time</span
+						>
+					</div>
+				</a>
+
+				<a href="./contact.html" class="hidden md:block"
+					><img
+						src="./img/contact-bubble.png"
+						alt="Picture of a speech bubble with `Contact me`inside"
+						class="w-16 h-16"
+						title="Contact"
+				/></a>
+			</div>
+
+			<div id="userNavBar" class="flex flex-row items-center"></div>
+		</nav>
+		<div
+			class="px-4 mx-auto max-w-xl flex flex-col items-center intro-text mb-8"
+		>
+			<h1 class="font-bold text-white text-4xl mb-6">Admin area</h1>
+			<p class="font-normal text-white text-3xl mb-6">
+				This is the holy 'Admin Area' where you can see an overview of all
+				blogposts. If you want to create a new post, just follow the link below
+				and go to the section 'Create new Blog post'
+			</p>
+			<a href="#jumperNewPost">
+				<p class="inline-block font-semibold text-white text-3xl mb-6">
+					Go to 'Create new Blog Post'
+				</p>
+				<img
+					src="./img/pfeil-nach-unten.png"
+					class="w-6 h-6 inline-block"
+					alt="Picture with an arrow which leads to the Create Section"
+				/>
+			</a>
+		</div>
+
+		<div id="blogEditor" class="flex flex-col items-center">
+			<div class="flex flex-col items-center">
+				<div>
+					<div
+						id="jumperBlogListing"
+						class="font-bold text-white text-4xl mb-6"
+					>
+						Blog Listing:
+					</div>
+				</div>
+
+				<div id="blogListing" class="flex justify-center flex-wrap"></div>
+			</div>
+
+			<div class="flex flex-col items-center">
+				<div
+					id="jumperNewPost"
+					class="font-bold text-white text-4xl mb-6 mt-12 text-center"
+				>
+					Create new Blog Post
+				</div>
+				<form
+					id="newBlogForm"
+					class="rounded-lg md:w-full max-w-lg bg-gray-300 p-8 mx-4 md:mx-0"
+				>
+					<div class="flex flex-wrap justify-center -mx-3 inline-block">
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="title"
+							>
+								Title:
+							</label>
+							<input
+								class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 md:mb-8 leading-tight focus:outline-none focus:bg-white"
+								id="title"
+								name="title"
+								type="text"
+								maxlength="35"
+								placeholder="Enter the blog title"
+								required
+							/>
+						</div>
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="city"
+							>
+								City:
+							</label>
+							<input
+								class="appearance-none block w-full bg-white border rounded py-3 px-4 md:mb-8 leading-tight focus:outline-none focus:bg-white"
+								id="city"
+								name="city"
+								type="text"
+								title="Bitte geben Sie nur Buchstaben ein"
+								placeholder="Please enter the city name"
+								required
+							/>
+						</div>
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="country"
+							>
+								Country:
+							</label>
+							<input
+								class="appearance-none block w-full bg-white border rounded py-3 px-4 md:mb-8 leading-tight focus:outline-none focus:bg-white"
+								id="country"
+								name="country"
+								type="text"
+								title="Bitte geben Sie nur Buchstaben ein"
+								placeholder="Please enter the country name"
+								required
+							/>
+						</div>
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="latitude"
+							>
+								Latitude:
+							</label>
+							<input
+								class="appearance-none block w-full bg-white border rounded py-3 px-4 md:mb-8 leading-tight focus:outline-none focus:bg-white"
+								id="latitude"
+								name="latitude"
+								type="text"
+								pattern="-?\d{1,3}\.\d+"
+								placeholder="Please enter the countrys latitude"
+								required
+							/>
+						</div>
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="longitude"
+							>
+								Longitude:
+							</label>
+							<input
+								class="appearance-none block w-full bg-white border rounded py-3 px-4 md:mb-8 leading-tight focus:outline-none focus:bg-white"
+								id="longitude"
+								name="longitude"
+								type="text"
+								pattern="-?\d{1,3}\.\d+"
+								placeholder="Please enter the countrys longitude"
+								required
+							/>
+						</div>
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="upload"
+							>
+								Picture Upload:
+							</label>
+							<input
+								class="appearance-none block w-full bg-white border rounded py-3 px-4 md:mb-8 leading-tight focus:outline-none focus:bg-white"
+								id="uploadBtn"
+								name="uploadBtn"
+								type="file"
+								required
+							/>
+						</div>
+						<div class="w-full px-3 mb-6 md:mb-0">
+							<label
+								class="block uppercase tracking-wide text-teal-800 text-md font-bold mb-2"
+								for="entry"
+							>
+								Blog Entry:
+							</label>
+							<textarea
+								class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
+								name="entry"
+								id="entry"
+								cols="30"
+								rows="10"
+								required
+							></textarea>
+							<div id="charsCounter" class="mb-8">0/120 characters</div>
+						</div>
+						<button
+							id="formSubmitBtn"
+							class="bg-teal-800 shadow hover:bg-teal-700 text-white font-bold py-3 px-12 md:px-24 rounded-full"
+						>
+							Submit
+						</button>
+					</div>
+				</form>
+				<a href="#jumperBlogListing">
+					<p
+						class="intro-text inline-block font-semibold text-white text-3xl mb-6 mt-10"
+					>
+						Go to 'Blog Listing'
+					</p>
+					<img
+						src="./img/pfeil-nach-oben.png"
+						class="w-6 h-6 inline-block"
+						alt="Picture with an arrow which leads to the Blog Listing"
+					/>
+				</a>
+			</div>
+		</div>
+		<footer class="w-full bg-teal-800 p-4">
+			<p class="py-8 text-center text-gray-500 text-xs">
+				&copy;2020 Travel Time Corp. All rights reserved.
+			</p>
+			<div class="text-center text-gray-500 text-xs">
+				Icons made by
+				<a
+					href="https://www.flaticon.com/de/autoren/those-icons"
+					title="Those Icons"
+					>Those Icons</a
+				>
+				,
+				<a href="https://www.flaticon.com/de/autoren/freepik" title="Freepik"
+					>Freepik</a
+				>
+				and
+				<a
+					href="https://www.flaticon.com/de/autoren/pixel-perfect"
+					title="Pixel perfect"
+					>Pixel perfect</a
+				>
+				from
+				<a href="https://www.flaticon.com/de/" title="Flaticon">
+					www.flaticon.com</a
+				>
+			</div>
+			<a
+				href="./contact.html"
+				class="lg:hidden float-right mt-10 mb-2 opacity-50"
+				><img
+					src="./img/contact-bubble.png"
+					alt="Picture of a speech bubble with `Contact me`inside"
+					class="w-12 h-12"
+					title="Contact"
+			/></a>
+		</footer>
+
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-storage.js"></script>
+		<script src="./src/JS/config.js"></script>
+		<script src="./src/JS/admin.js"></script>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="./src/CSS/tailwind.min.css" rel="stylesheet" />
+
+		<style>
+			html,
+			body {
+				height: 100%;
+				background-color: #285e61;
+				max-width: 1280px;
+				margin: auto;
+			}
+
+			h2 {
+				font-family: "Amatic SC", cursive;
+			}
+
+			#header-text {
+				font-family: "Amatic SC", cursive;
+				font-weight: 400;
+			}
+		</style>
+	</head>
+	<body>
+		<nav
+			class="px-8 lg:mb-20 h-32 w-full bg-teal-800 flex flex-row justify-between items-center text-center"
+		>
+			<div class="flex flex-row items-center">
+				<a href="./index.html">
+					<div class="flex items-center flex-shrink-0 text-white mr-6">
+						<svg
+							class="fill-current h-8 w-8 mr-2"
+							width="54"
+							height="54"
+							viewBox="0 0 54 54"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+							/>
+						</svg>
+						<span class="font-semibold text-4xl tracking-tight"
+							>Travel Time</span
+						>
+					</div>
+				</a>
+			</div>
+			<div>
+				<a
+					href="javascript:history.back()"
+					class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white"
+					>Back</a
+				>
+			</div>
+		</nav>
+		<main>
+			<div class="lg:flex mb-4 mx-5 md:mx-24 lg:mx-5 xl:mx-0">
+				<div
+					class="mb-8 lg:mb-0 lg:w-1/2 flex h-64 lg:h-auto justify-center items-center bg-cover bg-center border-4 rounded-lg"
+					style="background-image: url(./img/contact-image.jpg);"
+				></div>
+
+				<div class="lg:w-1/2 lg:px-16">
+					<h2
+						class="px-2 pt-1 lg:px-0 lg:pt-0 lg:pb-8 text-white font-semibold text-3xl lg:text-5xl tracking-tight"
+					>
+						Hi, it´s me ...
+					</h2>
+					<div
+						id="header-text"
+						class="px-2 pt-1 lg:px-0 lg:pt-0 lg:pb-8 text-white text-2xl lg:text-3xl tracking-tight"
+					>
+						... Christoph. I am a developer in the making based in Hamburg. One
+						of my passions, besides Frontend Development, is to discover new
+						places and landscapes, to get to know other cultures or just to
+						think outside the box. I am one of the participants of the
+						<span class="hover:text-black"
+							><a href="https://hamburgcodingschool.com/"
+								>Hamburg Coding School</a
+							></span
+						>. This site is a project I created as part of my web development
+						education. It is still in progress and new features will follow. My
+						goal is to pursue a career in web development after my training.
+						<br /><br />
+
+						<span class="font-semibold">Contact Details:</span> <br />
+						Christoph Pöllmann <br />
+						Hohenesch 1, 22765 Hamburg <br />
+						christophpoellmann@web.de <br />
+						0152 / 55426340 <br />
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="w-full bg-teal-800 p-4">
+			<p class="py-8 text-center text-gray-500 text-xs">
+				&copy;2020 Travel Time Corp. All rights reserved.
+			</p>
+		</footer>
+	</body>
+</html>

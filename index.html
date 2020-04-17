@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pölles Travel Blog</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="./src/CSS/tailwind.min.css" rel="stylesheet" />
+
+		<style>
+			html,
+			body {
+				height: 100%;
+				background-color: #285e61;
+				max-width: 1280px;
+				margin: auto;
+			}
+
+			h2 {
+				font-family: "Amatic SC", cursive;
+			}
+
+			#header-text {
+				font-family: "Amatic SC", cursive;
+				font-weight: 400;
+			}
+		</style>
+	</head>
+	<body>
+		<nav
+			class="px-8 mb-10 lg:mb-20 h-32 w-full bg-teal-800 flex flex-row justify-between items-center text-center"
+		>
+			<div class="flex flex-row items-center">
+				<div class="flex items-center flex-shrink-0 text-white mr-6">
+					<svg
+						class="fill-current h-8 w-8 mr-2"
+						width="54"
+						height="54"
+						viewBox="0 0 54 54"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M43.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+						/>
+					</svg>
+					<span class="font-semibold text-4xl tracking-tight">Travel Time</span>
+				</div>
+				<a href="./contact.html" class="hidden md:block"
+					><img
+						src="./img/contact-bubble.png"
+						alt="Picture of a speech bubble with `Contact me`inside"
+						class="w-16 h-16"
+						title="Contact"
+				/></a>
+			</div>
+			<div>
+				<a
+					href="./login.html"
+					class="inline-block text-sm px-4 lg:mr-2 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white"
+					>Login</a
+				>
+			</div>
+		</nav>
+		<header>
+			<div class="flex mb-4">
+				<div class="hidden lg:block lg:w-1/2 flex justify-center items-center">
+					<img
+						class="opacity-75 absolute z-0"
+						src="./img/welt.png"
+						alt="Picture of a world map"
+					/>
+				</div>
+				<div class="lg:w-1/2 px-8">
+					<h2
+						class="pb-8 text-white font-semibold text-3xl md:text-4xl lg:text-5xl tracking-tight"
+					>
+						Moin and welcome to Travel Time, my travel blog around the world!
+					</h2>
+					<div id="header-text" class="pb-8 text-white text-3xl tracking-tight">
+						Take a look at the world map to see exciting and dreamlike places in
+						the world. From breathtaking mountain regions to bustling cities,
+						from picturesque lakes to deserted forests, you'll find it all here.
+						I have visited all places in the last 5 years and documented my
+						experiences in short blog entries. Just click on the markers on the
+						map.
+						<br /><br />
+						Have fun...
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="map" class="shadow-xl rounded-md h-full"></div>
+
+		<footer class="w-full bg-teal-800 p-4">
+			<p class="py-8 text-center text-gray-500 text-xs">
+				&copy;2020 Travel Time Corp. All rights reserved.
+			</p>
+
+			<div class="text-center text-gray-500 text-xs">
+				Icons made by
+				<a
+					href="https://www.flaticon.com/de/autoren/popcorns-arts"
+					title="Icon Pond"
+					>Icon Pond</a
+				>
+				and
+				<a href="https://www.flaticon.com/de/autoren/freepik" title="Freepik"
+					>Freepik</a
+				>
+
+				from
+				<a href="https://www.flaticon.com/de/" title="Flaticon">
+					www.flaticon.com</a
+				>
+			</div>
+			<a
+				href="./contact.html"
+				class="md:hidden float-right mt-10 mb-2 opacity-50"
+				><img
+					src="./img/contact-bubble.png"
+					alt="Picture of a speech bubble with `Contact me`inside"
+					class="w-12 h-12"
+					title="Contact"
+			/></a>
+		</footer>
+
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-storage.js"></script>
+
+		<script src="./src/JS/config.js"></script>
+		<script src="./src/JS/index.js"></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLPD-mInMQNzitEfn0W8NPqwubjs190Jg&callback=initMap"
+			async
+			defer
+		></script>
+	</body>
+</html>
