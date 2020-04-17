@@ -14,7 +14,7 @@ const showUserUi = (userData) => {
 			<a href="../../src/auth/restricted.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
 			Home
 			</a>
-			<button id="logout-btn" class="mx-3 inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
+			<button onclick="logout()" class="mx-3 inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
 				Logout
 			</button>
 			<div class="flex flex-col items-center">
